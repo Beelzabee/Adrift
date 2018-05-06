@@ -2,6 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Manager_Builder : MonoBehaviour {
+public class Manager_Builder {
 
 }
