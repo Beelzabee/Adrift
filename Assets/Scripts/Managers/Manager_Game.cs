@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Manager_Game : MonoBehaviour {
 	public static Manager_Game manager_Game;
+	Manager_World manager_World;
+	World world;
 
 	/***MonoBehaviour Functions***/
 	void Awake () {
@@ -16,5 +18,10 @@ public class Manager_Game : MonoBehaviour {
 		else {
 			Destroy (gameObject);
 		}
+	}
+
+	void Start () {
+		manager_World = GameObject.Find ("World").GetComponent<Manager_World> ();
+		world = manager_World.BuildWorld ();
 	}
 }

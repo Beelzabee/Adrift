@@ -7,24 +7,28 @@ public class Manager_World : MonoBehaviour {
 
 	/***MonoBehaviour Functions***/
 	void Awake () {
-		//This is the only gameManger on a GameObject
+		//This is the only Manager_World on a GameObject
 		if (world == null) {
 			DontDestroyOnLoad (gameObject);
 			world = this;
 		} 
-		//This is NOT the only gameManger on a GameObject
+		//This is NOT the only Manager_World on a GameObject
 		else {
 			Destroy (gameObject);
 		}
 	}
 
-	// FIXME: This function takes a ship and determines whether it has
-	// been split in two or more sections
-	public void CheckShipForSplit () {
+	public World BuildWorld () {
+		World world = new World ();
+
+		return world;	
 	}
 
-	// FIXME: This function takes a ship that has been split and arranges
-	// its remaining sections into new ships and debri
-	public void ShipHasSplit () {
+	// Build stars/planets/asteroids/etc
+	void BuildEnvironment () {
+	}
+
+	// Build any ships/stations/buildings
+	void BuildStructures () {
 	}
 }
